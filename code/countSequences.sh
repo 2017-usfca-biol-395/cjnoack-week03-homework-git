@@ -7,10 +7,10 @@
 
 # Count the number of sequences in our fasta file
 
-for $@ in *.fasta
+for file in $@
 do 
 
-	echo "This file has $(grep -c "@" animal_mRNA.fasta) sequences"
-	echo "This file has $(grep -c "@" crab_mitochondrial_rRNA.fasta) sequences"
-	echo "This file has $(grep -c "@" plant_rRNA.fasta) sequences"
+	echo "This file has $(grep ">"  animal_mRNA.fasta | wc -l) sequences"
+	echo "This file has $(grep ">" crab_mitochondrial_rRNA.fasta | wc -l) sequences"
+	echo "This file has $(grep ">" plant_rRNA.fasta wc -l) sequences"
 done
