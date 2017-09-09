@@ -6,11 +6,14 @@
 # September 9, 2017
 
 # Set up output directories.
-echo Setting up output directories...
+echo "Setting up output directories..."
 mkdir code data output
+cd code 
+touch .gitkeep
+cd .. 
 cd data
 
-# Uploading fasta files into raw_data folder
+# Downloading fasta files into raw_data folder
 mkdir raw_data
 cd raw_dataunzip fasta-archive.zip
 curl -L http://npk.io/PUlBaY+ -o fasta-archive.zip
@@ -24,7 +27,12 @@ cd 2017-09-09_githomework
 cd cjnoack-week03-homework-git
 cd output
 mkdir figures tables
+cd figures
+touch .gitkeep
+cd ..
+cd tables
+touch .gitkeep
 
-echo Done! 
+echo "Done!" 
 
 
