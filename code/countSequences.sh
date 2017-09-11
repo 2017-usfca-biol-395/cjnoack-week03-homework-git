@@ -17,4 +17,4 @@ do
 	grep -c "^>" $file
 done
 
-echo "Testing"
+echo "Final sequence count complete."
